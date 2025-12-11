@@ -1,7 +1,8 @@
-public class Create
+public class Table
 {
-    public static void TambahBarang()
+    public static void TampilkanData()
     {
         Console.WriteLine("Fungsi tambah barang dipanggil.");
+        
     }
 }

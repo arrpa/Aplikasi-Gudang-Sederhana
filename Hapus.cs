@@ -1,7 +1,8 @@
-public class Create
+public class Hapus
 {
-    public static void TambahBarang()
+    public static void HapusBarang()
     {
         Console.WriteLine("Fungsi tambah barang dipanggil.");
+        
     }
 }

@@ -1,0 +1,15 @@
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Aplikasi_Gudang_Sederhana.exe
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Aplikasi_Gudang_Sederhana.deps.json
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Aplikasi_Gudang_Sederhana.runtimeconfig.json
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Aplikasi_Gudang_Sederhana.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Aplikasi_Gudang_Sederhana.pdb
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.AssemblyInfoInputs.cache
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.AssemblyInfo.cs
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.csproj.CoreCompileInputs.cache
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.sourcelink.json
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\refint\Aplikasi_Gudang_Sederhana.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.pdb
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.genruntimeconfig.cache
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\ref\Aplikasi_Gudang_Sederhana.dll

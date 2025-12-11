@@ -1,7 +1,8 @@
-public class Create
+public class Update
 {
-    public static void TambahBarang()
+    public static void UpdateBarang()
     {
         Console.WriteLine("Fungsi tambah barang dipanggil.");
+        
     }
 }

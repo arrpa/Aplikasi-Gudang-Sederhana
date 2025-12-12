@@ -1,19 +1,18 @@
 ﻿public class Program
 {
+    private static Data data = new Data();
     static void Main()
     {
-        bool status = true;
-
         Console.Write("Masukkan Username: ");
         string user = Console.ReadLine();
-        Console.Write("Masukkan Username: ");
+        Console.Write("Masukkan Password: ");
         string pass = Console.ReadLine();
 
         if (user == "Admin")
         {
             if (pass == "12345")
             {
-                while (status)
+                while (true)
                 {
                     Console.WriteLine("Selamat datang!");
                     Console.WriteLine("1. Data barang!");
@@ -22,33 +21,28 @@
                     Console.WriteLine("4. Hapus barang!");
                     Console.WriteLine("5. Keluar");
                     Console.Write("Pilih menu: ");
-                    int pilihan = Convert.ToInt32(Console.ReadLine());
+                    int pilihan = int.Parse(Console.ReadLine());
 
                     switch (pilihan)
                         {
                             case 1:
-                                status = false;
-                                Table.TampilkanData();
+                                Table.TampilkanData(data);
                                 break;
                             case 2:
-                                status = false;
-                                Create.TambahBarang();
+                                Create.TambahBarang(data);
                                 break;
                             case 3:
-                                status = false;
                                 Update.UpdateBarang();
                                 break;
                             case 4:
-                                status = false;
                                 Hapus.HapusBarang();
                                 break;
                             case 5:
-                                status = false;
                                 Console.WriteLine("Keluar dari program.");
-                                break;
+                                return;
                             default:
                                 Console.WriteLine("Pilihan tidak valid. Silakan coba lagi.");
-                                return;
+                                break;
                         }
                 }
                 

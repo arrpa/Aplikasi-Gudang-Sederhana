@@ -1,7 +1,46 @@
 public class Create
 {
-    public static void TambahBarang()
+    public static void TambahBarang(Data data)
     {
-        Console.Write("Tambah Barang:");
+        Console.WriteLine("Tambah barang baru!");
+        Console.Write("Gajadi? (y/n): ");
+        string jawab = Console.ReadLine();
+        jawab = jawab.ToLower();
+
+        if (jawab == "yes" || jawab == "y")
+        {
+            Console.WriteLine("Penambahan barang dibatalkan.");
+            return;
+        } else if (jawab  == "no" || jawab == "n")
+        {
+            try
+            {
+                Console.Write("Masukkan ID Barang: ");
+                int id = int.Parse(Console.ReadLine());
+                Console.Write("Masukkan Nama Barang: ");
+                string nama = Console.ReadLine();
+                Console.Write("Masukkan Harga Barang: ");
+                int harga = int.Parse(Console.ReadLine());
+                Console.Write("Masukkan Stok Barang: ");
+                int stok = int.Parse(Console.ReadLine());
+
+                Console.WriteLine($"\nDEBUG: Jumlah data SEBELUM tambah: {data.GetLength()}");
+
+
+                data.AddData(id, nama, harga, stok);
+
+                Console.WriteLine($"DEBUG: Jumlah data SETELAH tambah: {data.GetLength()}");
+                Console.WriteLine("Berhasil menambahkan barang!");
+            } catch (Exception)
+            {
+                Console.WriteLine("Error: Terjadi kesalahan saat menambahkan barang. Silakan coba lagi.");
+            }
+        }
+
+    }
+
+    public static void TampilkanSemuaBarang(Data data)
+    {
+        Table.TampilkanData(data);
     }
 }

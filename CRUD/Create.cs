@@ -2,6 +2,6 @@ public class Create
 {
     public static void TambahBarang()
     {
-        Console.WriteLine("Fungsi tambah barang dipanggil.");
+        Console.Write("Tambah Barang:");
     }
 }

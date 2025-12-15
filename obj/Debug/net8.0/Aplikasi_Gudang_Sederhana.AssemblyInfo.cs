@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aplikasi_Gudang_Sederhana")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54aaca2187eb193c3a814c043881432573e62478")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a494884a9c6fbe4a907cc9530ff636e6ff618082")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aplikasi_Gudang_Sederhana")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aplikasi_Gudang_Sederhana")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

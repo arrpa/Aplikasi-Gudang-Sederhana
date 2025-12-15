@@ -6,6 +6,10 @@ public class Hapus
         {
             Console.WriteLine("===Hapus barang===");
             Table.TampilkanData(data);
+            if (data.GetLength() == 0)
+            {
+                return;
+            }
             Console.Write("Kembali? (y/n): ");
             string jawab = Console.ReadLine();
             jawab = jawab.ToLower();
@@ -16,7 +20,7 @@ public class Hapus
                 return;
             } else if (jawab == "no" || jawab == "n")
             {
-                
+                // Lanjut disini
             } else
             {
                 Console.WriteLine("Tolong input yang benar!");

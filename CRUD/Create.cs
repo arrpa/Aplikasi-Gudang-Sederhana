@@ -27,12 +27,14 @@ public class Create
                     Console.Write("Masukkan Stok Barang: ");
                     int stok = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine($"\nDEBUG: Jumlah data SEBELUM tambah: {data.GetLength()}");
-
+                    if (id != data.CariIndexById(id))
+                    {
+                        Console.WriteLine("Error: ID Barang sudah ada. Silakan gunakan ID yang lain.");
+                        continue;
+                    }
 
                     data.AddData(id, nama, harga, stok);
 
-                    Console.WriteLine($"DEBUG: Jumlah data SETELAH tambah: {data.GetLength()}");
                     Console.WriteLine("Berhasil menambahkan barang!");
                 } catch (Exception)
                 {

@@ -23,7 +23,7 @@
                         Console.WriteLine("4. Update barang!");
                         Console.WriteLine("5. Hapus barang!");
                         Console.WriteLine("6. Keluar");
-                        Console.Write("Pilih menu (1/2/3/4/5): ");
+                        Console.Write("Pilih menu (1/2/3/4/5/6): ");
                         int pilihan = int.Parse(Console.ReadLine());
 
                         switch (pilihan)

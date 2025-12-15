@@ -6,6 +6,10 @@ public class Update
         {
             Console.WriteLine("===Update barang===");
             Table.TampilkanData(data);
+            if (data.GetLength() == 0)
+            {
+                return;
+            }
             Console.Write("Kembali? (y/n): ");
             string jawab = Console.ReadLine();
             jawab = jawab.ToLower();
@@ -16,7 +20,7 @@ public class Update
                 return;
             } else if (jawab == "no" || jawab == "n")
             {
-                
+                // Lanjut disini
             } else
             {
                 Console.WriteLine("Input yang benar!");

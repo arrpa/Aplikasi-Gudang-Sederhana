@@ -51,4 +51,16 @@ public class Data
     {
         return IdBarang.Length;
     }
+
+    public int CariIndexById(int id)
+    {
+        for (int i = 0; i < IdBarang.Length; i++)
+        {
+            if (IdBarang[i] == id)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 }

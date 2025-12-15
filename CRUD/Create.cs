@@ -27,7 +27,8 @@ public class Create
                     Console.Write("Masukkan Stok Barang: ");
                     int stok = int.Parse(Console.ReadLine());
 
-                    if (id != data.CariIndexById(id))
+                    int sudahAda = data.CariIndexById(id);
+                    if (sudahAda != -1)
                     {
                         Console.WriteLine("Error: ID Barang sudah ada. Silakan gunakan ID yang lain.");
                         continue;

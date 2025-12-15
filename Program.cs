@@ -14,36 +14,47 @@
             {
                 while (true)
                 {
-                    Console.WriteLine("Selamat datang!");
-                    Console.WriteLine("1. Data barang!");
-                    Console.WriteLine("2. Tambah barang!");
-                    Console.WriteLine("3. Update barang!");
-                    Console.WriteLine("4. Hapus barang!");
-                    Console.WriteLine("5. Keluar");
-                    Console.Write("Pilih menu: ");
-                    int pilihan = int.Parse(Console.ReadLine());
+                    try
+                    {
+                        Console.WriteLine("Selamat datang!");
+                        Console.WriteLine("1. Data barang!");
+                        Console.WriteLine("2. Tambah barang!");
+                        Console.WriteLine("3. Cari barang!");
+                        Console.WriteLine("4. Update barang!");
+                        Console.WriteLine("5. Hapus barang!");
+                        Console.WriteLine("6. Keluar");
+                        Console.Write("Pilih menu (1/2/3/4/5): ");
+                        int pilihan = int.Parse(Console.ReadLine());
 
-                    switch (pilihan)
-                        {
-                            case 1:
-                                Table.TampilkanData(data);
-                                break;
-                            case 2:
-                                Create.TambahBarang(data);
-                                break;
-                            case 3:
-                                Update.UpdateBarang();
-                                break;
-                            case 4:
-                                Hapus.HapusBarang();
-                                break;
-                            case 5:
-                                Console.WriteLine("Keluar dari program.");
-                                return;
-                            default:
-                                Console.WriteLine("Pilihan tidak valid. Silakan coba lagi.");
-                                break;
-                        }
+                        switch (pilihan)
+                            {
+                                case 1:
+                                    Table.TampilkanData(data);
+                                    break;
+                                case 2:
+                                    Create.TambahBarang(data);
+                                    break;
+                                case 3:
+                                    Search.CariBarang(data);
+                                    break;
+                                case 4:
+                                    Update.UpdateBarang(data);
+                                    break;
+                                case 5:
+                                    Hapus.HapusBarang(data);
+                                    break;
+                                case 6:
+                                    Console.WriteLine("Terimakasih sudah menggunakan aplikasi ini!");
+                                    return;
+                                default:
+                                    Console.WriteLine("Pilihan tidak valid. Silakan coba lagi.");
+                                    break;
+                            }
+                    } catch (Exception)
+                    {
+                        Console.WriteLine("Error: Input tidak valid. Silakan masukkan bilangan bulat antara 1 sampai 5.");
+                        continue;
+                    }
                 }
                 
             } else if (pass != "12345")

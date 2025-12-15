@@ -11,11 +11,12 @@ public class Table
             return;
         }
 
-        Console.WriteLine("|ID|\t|Nama|\t|Harga|\t|Stok|");
+        Console.WriteLine("ID\t|Nama\t|Harga\t|Stok");
         for (int i = 0; i < data.GetLength(); i++)
         {
-            Console.WriteLine($"|{data.IdBarang[i]}|\t|{data.NamaBarang[i]}|\t|{data.HargaBarang[i]}|\t|{data.StokBarang[i]}|");
+            Console.WriteLine($"{data.IdBarang[i]}\t|{data.NamaBarang[i]}\t|{data.HargaBarang[i]}\t|{data.StokBarang[i]}");
         }
+        Console.WriteLine("Filter?");
         
     }
 }

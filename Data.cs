@@ -1,17 +1,9 @@
 public class Data
 {
-    public int[] IdBarang;    
-    public string[] NamaBarang;
-    public int[] HargaBarang;
-    public int[] StokBarang;
-
-    public Data()
-    {
-        IdBarang = new int[0];
-        NamaBarang = new string[0];
-        HargaBarang = new int[0];
-        StokBarang = new int[0];
-    }
+    public int[] IdBarang = new int[0];    
+    public string[] NamaBarang = new string[0];
+    public int[] HargaBarang = new int[0];
+    public int[] StokBarang = new int[0];
     
     private void SizeData()
     {

@@ -25,6 +25,22 @@ public class Create
                     int harga = int.Parse(Console.ReadLine());
                     Console.Write("Masukkan Stok Barang: ");
                     int stok = int.Parse(Console.ReadLine());
+                    Console.Write("Pilih kategori barang (edible/nonedible): ");
+                    string pilihan = Console.ReadLine().ToLower();
+                    Data.JenisBarang kategori;
+
+                    switch (pilihan)
+                    {
+                        case "edible":
+                            kategori = Data.JenisBarang.edible;
+                            break;
+                        case "nonedible":
+                            kategori = Data.JenisBarang.nonedible;
+                            break;
+                        default:
+                            Console.WriteLine("Error: Kategori tidak valid. Silakan coba lagi.");
+                            continue;
+                    }
 
                     int sudahAda = data.CariIndexById(id);
                     if (sudahAda != -1)
@@ -33,7 +49,7 @@ public class Create
                         continue;
                     }
 
-                    data.AddData(id, nama, harga, stok);
+                    data.AddData(id, nama, harga, stok, kategori);
 
                     Console.WriteLine("Berhasil menambahkan barang!");
                 } catch (Exception)

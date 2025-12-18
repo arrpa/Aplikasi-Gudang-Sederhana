@@ -4,6 +4,8 @@ public class Data
     public string[] NamaBarang = new string[0];
     public int[] HargaBarang = new int[0];
     public int[] StokBarang = new int[0];
+    public enum JenisBarang {edible, nonedible};
+    public JenisBarang[] Kategori =  new JenisBarang[0];
     
     private void SizeData()
     {
@@ -13,6 +15,7 @@ public class Data
         string[] newNamaBarang = new string[plus];
         int[]  newHargaBarang = new int[plus];
         int [] newStokBarang = new int[plus];
+        JenisBarang[] newKategori = new JenisBarang[plus];
 
         for (int i = 0; i < IdBarang.Length; i++)
         {
@@ -20,15 +23,17 @@ public class Data
             newNamaBarang[i] = NamaBarang[i];
             newHargaBarang[i] = HargaBarang[i];
             newStokBarang[i] = StokBarang[i];
+            newKategori[i] = Kategori[i];
         }
 
         IdBarang = newIdBarang;
         NamaBarang = newNamaBarang; 
         HargaBarang = newHargaBarang;
         StokBarang = newStokBarang;
+        Kategori = newKategori;
     }
 
-    public void AddData(int id, string nama, int harga, int stok)
+    public void AddData(int id, string nama, int harga, int stok, JenisBarang kategori)
     {
         SizeData();
         int index = IdBarang.Length - 1;
@@ -37,6 +42,8 @@ public class Data
         NamaBarang[index] = nama;
         HargaBarang[index] = harga;
         StokBarang[index] = stok;
+        Kategori[index] = kategori;
+        
     }
 
     public int GetLength()

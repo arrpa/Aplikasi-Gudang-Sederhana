@@ -7,8 +7,7 @@ public class Create
             Console.WriteLine("===Tambah barang baru===");
             Table.TampilkanData(data);
             Console.Write("Kembali? (y/n): ");
-            string jawab = Console.ReadLine();
-            jawab = jawab.ToLower();
+            string jawab = Console.ReadLine().ToLower();
 
             if (jawab == "yes" || jawab == "y")
             {

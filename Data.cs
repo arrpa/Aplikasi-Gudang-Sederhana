@@ -23,7 +23,7 @@ public class Data
         }
 
         IdBarang = newIdBarang;
-        NamaBarang = newNamaBarang;
+        NamaBarang = newNamaBarang; 
         HargaBarang = newHargaBarang;
         StokBarang = newStokBarang;
     }

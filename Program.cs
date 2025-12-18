@@ -52,7 +52,7 @@
                             }
                     } catch (Exception)
                     {
-                        Console.WriteLine("Error: Input tidak valid. Silakan masukkan bilangan bulat antara 1 sampai 5.");
+                        Console.WriteLine("Error: Input tidak valid. Silakan masukkan bilangan bulat antara 1 sampai 6.");
                         continue;
                     }
                 }

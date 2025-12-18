@@ -6,13 +6,16 @@ public class Update
         {
             Console.WriteLine("===Update barang===");
             Table.TampilkanData(data);
+
             if (data.GetLength() == 0)
             {
+                Console.WriteLine("Data barang masih kosong.");
                 return;
             }
+
+
             Console.Write("Kembali? (y/n): ");
-            string jawab = Console.ReadLine();
-            jawab = jawab.ToLower();
+            string jawab = Console.ReadLine().ToLower();
 
             if (jawab == "yes" || jawab == "y")
             {
@@ -20,8 +23,46 @@ public class Update
                 return;
             } else if (jawab == "no" || jawab == "n")
             {
-                // Lanjut disini
-            } else
+                try
+                {
+                    Console.Write("Masukkan ID barang yang ingin diupdate: ");
+                    int cariId = int.Parse(Console.ReadLine());
+
+                    bool ditemukan = false;
+
+                    for (int i = 0; i < data.GetLength(); i++)
+                    {
+                        if (data.IdBarang[i] == cariId)
+                        {
+                            Console.WriteLine("Barang Ditemukan");
+
+                            Console.Write("Nama Baru : ");
+                            data.NamaBarang[i] = Console.ReadLine();
+                            
+                            Console.Write("Harga Baru : ");
+                            data.HargaBarang[i] = int.Parse(Console.ReadLine());
+
+                            Console.Write("Stok Baru : ");
+                            data.StokBarang[i] = int.Parse(Console.ReadLine());
+
+                            ditemukan = true;
+                            Console.WriteLine("Data barang berhasil diupdate");
+                            break; 
+                        }
+                    }
+
+                    if (!ditemukan)
+                    {
+                        Console.WriteLine("ID Barang tidak ditemukan");
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Input harus berupa angka!");
+                }
+
+            } 
+            else
             {
                 Console.WriteLine("Input yang benar!");
                 continue;

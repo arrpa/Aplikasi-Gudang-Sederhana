@@ -11,7 +11,7 @@ public class Table
             return;
         }
 
-        Console.WriteLine("ID\t|Nama\t|Harga\t|Stok\t|Jenis Barang");
+        Console.WriteLine("|ID\t|Nama\t|Harga\t|Stok\t|Jenis Barang");
         for (int i = 0; i < data.GetLength(); i++)
         {
             Console.WriteLine($"{data.IdBarang[i]}\t|{data.NamaBarang[i]}\t|Rp.{data.HargaBarang[i]}\t|{data.StokBarang[i]}\t|{data.Kategori[i]}");

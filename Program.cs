@@ -11,6 +11,7 @@ public class Program
 {
     static void Main()
     {
+        // Laman awal untuk login sederhana dan prosesnya
         Console.WriteLine("-----------------");
         Console.WriteLine("|     Login      |");
         Console.WriteLine("-----------------");
@@ -19,10 +20,12 @@ public class Program
         Console.Write("Masukkan Password: ");
         string pass_0401 = Console.ReadLine();
 
+        // Validasi kridensial
         if (user_0401 == "Admin")
         {
             if (pass_0401 == "12345")
             {
+                // Pindah ke file Dashboard dengan memanggil method DisplayMenu
                 Menu.DisplayMenu();
             } else if (pass_0401 != "12345")
             {

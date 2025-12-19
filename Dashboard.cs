@@ -1,5 +1,6 @@
 public class Menu
 {
+    // Panggil semua class Data untuk nanti digunakan di semua fungsu dan menu
     private static Data data = new Data();
     public static void DisplayMenu()
     {
@@ -8,6 +9,7 @@ public class Menu
                 {
                     try
                     {
+                        // Tampilan menu utama
                         Console.WriteLine("\n=== Menu Utama ===!");
                         Console.WriteLine("1. Data barang");
                         Console.WriteLine("2. Tambah barang");
@@ -19,6 +21,7 @@ public class Menu
                         Console.Write("Pilih menu (1/2/3/4/5/6/7): ");
                         int pilihan_0401 = int.Parse(Console.ReadLine());
 
+                        // Panggil semua class sesuai dengan pilihan menu dengan tambahan method Data
                         switch (pilihan_0401)
                             {
                                 case 1:
@@ -48,6 +51,7 @@ public class Menu
                             }
                     } catch (Exception)
                     {
+                        // Menangkap error jika input bukan bilangan bulat
                         Console.WriteLine("Error: Input tidak valid. Silakan masukkan bilangan bulat antara 1 sampai 7.");
                         continue;
                     }

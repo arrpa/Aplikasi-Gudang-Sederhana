@@ -1,3 +1,4 @@
+// Import library untuk pemudahan buat tabel
 using ConsoleTables;
 
 public class Table
@@ -5,11 +6,13 @@ public class Table
     public static void TampilkanData(Data data)
     {
         Console.WriteLine("\nData barang di gudang:");
+        // Cek apakah data nya ada atau tidak
         if (data.GetLength() == 0)
         {
             Console.WriteLine("Belum ada data barang yang ada.");
             return;
         }
+        // Buat tabel untuk meliat semua data berdasarkan array di class Data
         var table = new ConsoleTable("ID", "Nama", "Harga", "Stok", "Jenis Barang");
         for (int i = 0; i < data.GetLength(); i++)
         {

@@ -17,21 +17,5 @@ public class Table
             Console.WriteLine($"{data.IdBarang[i]}\t|{data.NamaBarang[i]}\t|Rp.{data.HargaBarang[i]}\t|{data.StokBarang[i]}\t|{data.Kategori[i]}");
         }
         
-        // sengaja ini dimatiin masih debug
-        // Console.Write("Filter (y/n): ");
-        // string jawab = Console.ReadLine();
-        // jawab = jawab.ToLower();
-        // if (jawab == "yes" || jawab == "y")
-        // {
-        //     Filtering.FilterData(data);
-        // } else if (jawab == "no" || jawab == "n")
-        // {
-        //     return;
-        // } else
-        // {
-        //     Console.WriteLine("Input tidak valid, coba lagi.");
-        //     return;
-        // }
-        
     }
 }

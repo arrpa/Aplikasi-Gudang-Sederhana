@@ -2,59 +2,38 @@ public class Search
 {
     public static void CariBarang(Data data)
     {
-        Console.WriteLine("=== Pencarian Barang ===");
-        Console.WriteLine("1. Cari berdasarkan ID");
-        Console.WriteLine("2. Cari berdasarkan Nama");
-        Console.Write("Pilih metode pencarian (1/2): ");
-        int pilihan = int.Parse(Console.ReadLine());
-
-        if (pilihan == 1)
+        while (true)
         {
-            Console.Write("Masukkan ID Barang: ");
-            int id = int.Parse(Console.ReadLine());
+            Console.WriteLine("=== Pencarian Barang ===");
+            Console.WriteLine("1. Cari berdasarkan ID");
+            Console.WriteLine("2. Cari berdasarkan Nama");
+            Console.WriteLine("3. Kembali ke menu utama");
+            Console.Write("Pilih metode pencarian (1/2/3): ");
+            int pilihan = int.Parse(Console.ReadLine());
 
-            int index = data.CariIndexById(id);
-            if (index != -1)
+            try
             {
-                Console.WriteLine($"Barang ditemukan!");
-                Console.WriteLine($"ID: {data.IdBarang[index]}");
-                Console.WriteLine($"Nama: {data.NamaBarang[index]}");
-                Console.WriteLine($"Harga: {data.HargaBarang[index]}");
-                Console.WriteLine($"Stok: {data.StokBarang[index]}");
-            }
-            else
-            {
-                Console.WriteLine("Barang dengan ID tersebut tidak ditemukan.");
-            }
-        }
-        else if (pilihan == 2)
-        {
-            Console.Write("Masukkan Nama Barang: ");
-            string nama = Console.ReadLine();
-
-            bool ditemukan = false;
-            for (int i = 0; i < data.GetLength(); i++)
-            {
-                if (data.NamaBarang[i] != null && data.NamaBarang[i].ToLower().Contains(nama.ToLower()))
+                switch (pilihan)
                 {
-                    Console.WriteLine($"Barang ditemukan!");
-                    Console.WriteLine($"ID: {data.IdBarang[i]}");
-                    Console.WriteLine($"Nama: {data.NamaBarang[i]}");
-                    Console.WriteLine($"Harga: {data.HargaBarang[i]}");
-                    Console.WriteLine($"Stok: {data.StokBarang[i]}");
-                    ditemukan = true;
+                    case 1:
+                        Searching.ProsesSearchById(data);
+                        break;
+                    case 2:
+                        Searching.ProsesSearchByNam(data);
+                        break;
+                    case 3:
+                        Console.WriteLine("Kembali ke menu utama.");
+                        return;
+                    default:
+                        Console.WriteLine("Pilihan tidak valid.");
+                        break;
                 }
             }
-
-            if (!ditemukan)
+            catch (Exception)
             {
-                Console.WriteLine("Barang dengan nama tersebut tidak ditemukan.");
+                Console.WriteLine("Error: Input tidak valid. Silakan masukkan bilangan bulat 1 atau 2.");
+                continue;
             }
         }
-        else
-        {
-            Console.WriteLine("Pilihan tidak valid.");
-        }
-
     }
 }

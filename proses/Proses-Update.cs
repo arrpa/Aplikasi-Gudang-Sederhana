@@ -4,46 +4,46 @@ public class Edit
     {
         try
         {
-            Console.Write("Masukkan ID barang yang ingin diupdate: ");
-            int cariId = int.Parse(Console.ReadLine());
+            Console.Write("\nMasukkan ID barang yang ingin diupdate: ");
+            int cariId_0401 = int.Parse(Console.ReadLine());
 
-            bool ditemukan = false;
+            bool ditemukan_0401 = false;
 
             for (int i = 0; i < data.GetLength(); i++)
             {
-                if (data.IdBarang[i] == cariId)
+                if (data.IdBarang_0401[i] == cariId_0401)
                 {
                     Console.WriteLine("Barang Ditemukan");
 
                     Console.Write("Nama Baru : ");
-                    data.NamaBarang[i] = Console.ReadLine();
+                    data.NamaBarang_0401[i] = Console.ReadLine();
                             
                     Console.Write("Harga Baru : ");
-                    data.HargaBarang[i] = int.Parse(Console.ReadLine());
+                    data.HargaBarang_0401[i] = int.Parse(Console.ReadLine());
 
                     Console.Write("Stok Baru : ");
-                    data.StokBarang[i] = int.Parse(Console.ReadLine());
+                    data.StokBarang_0401[i] = int.Parse(Console.ReadLine());
 
                     Console.Write("Ganti kategori? (y/n): ");
-                    string ganti = Console.ReadLine().ToLower();
-                    Data.JenisBarang kategori;
+                    string ganti_0401 = Console.ReadLine().ToLower();
+                    Data.JenisBarang_0401 kategori_0401;
                             
-                    if (ganti == "yes" || ganti == "y")
+                    if (ganti_0401 == "yes" || ganti_0401 == "y")
                     {
-                        if (data.Kategori[i] == Data.JenisBarang.edible)
+                        if (data.Kategori_0401[i] == Data.JenisBarang_0401.edible)
                         {
-                            data.Kategori[i] = Data.JenisBarang.nonedible;
+                            data.Kategori_0401[i] = Data.JenisBarang_0401.nonedible;
                             return;
-                        } else if (data.Kategori[i] == Data.JenisBarang.nonedible)
+                        } else if (data.Kategori_0401[i] == Data.JenisBarang_0401.nonedible)
                         {
-                            data.Kategori[i] = Data.JenisBarang.edible;
+                            data.Kategori_0401[i] = Data.JenisBarang_0401.edible;
                             return;
                         } else
                         {
                             Console.WriteLine("Kategori tidak valid. Jenis Barang tidak diubah.");
                             return;
                         }
-                    } else if (ganti == "no" || ganti == "n")
+                    } else if (ganti_0401 == "no" || ganti_0401 == "n")
                     {
                         Console.WriteLine("Jenis Barang tidak diubah.");
                     } else
@@ -51,13 +51,13 @@ public class Edit
                         Console.WriteLine("Input tidak valid. Jenis Barang tidak diubah.");
                     }
 
-                    ditemukan = true;
+                    ditemukan_0401 = true;
                     Console.WriteLine("Data barang berhasil diupdate");
                     break; 
                 }
             }
 
-            if (!ditemukan)
+            if (!ditemukan_0401)
             {
                 Console.WriteLine("ID Barang tidak ditemukan");
             }

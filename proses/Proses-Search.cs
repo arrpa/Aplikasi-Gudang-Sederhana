@@ -3,16 +3,17 @@ public class Searching
     public static void ProsesSearchById(Data data)
     {
         Console.Write("Masukkan ID Barang: ");
-        int id = int.Parse(Console.ReadLine());
+        int id_0401 = int.Parse(Console.ReadLine());
 
-        int index = data.CariIndexById(id);
-        if (index != -1)
+        int index_0401 = data.CariIndexById(id_0401);
+        if (index_0401 != -1)
         {
-            Console.WriteLine($"Barang ditemukan!");
-            Console.WriteLine($"ID: {data.IdBarang[index]}");
-            Console.WriteLine($"Nama: {data.NamaBarang[index]}");
-            Console.WriteLine($"Harga: {data.HargaBarang[index]}");
-            Console.WriteLine($"Stok: {data.StokBarang[index]}");
+            Console.WriteLine($"\nBarang ditemukan!");
+            Console.WriteLine($"ID: {data.IdBarang_0401[index_0401]}");
+            Console.WriteLine($"Nama: {data.NamaBarang_0401[index_0401]}");
+            Console.WriteLine($"Harga: {data.HargaBarang_0401[index_0401]}");
+            Console.WriteLine($"Stok: {data.StokBarang_0401[index_0401]}");
+            Console.WriteLine($"Jenis Barang: {data.Kategori_0401[index_0401]}");
             return;
         }
         else
@@ -22,39 +23,31 @@ public class Searching
         }
     }
 
-    public static void ProsesSearchByNam(Data data)
+    public static void ProsesSearchByNama(Data data)
     {
         Console.Write("Masukkan Nama Barang: ");
-        string nama = Console.ReadLine();
+        string nama_0401 = Console.ReadLine();
 
-        bool ditemukan = false;
+        bool ditemukan_0401 = false;
         for (int i = 0; i < data.GetLength(); i++)
         {
-            if (data.NamaBarang[i] != null && data.NamaBarang[i].ToLower().Contains(nama.ToLower()))
+            if (data.NamaBarang_0401[i] != null && data.NamaBarang_0401[i].ToLower().Contains(nama_0401))
             {
-                Console.WriteLine($"Barang ditemukan!");
-                Console.WriteLine($"ID: {data.IdBarang[i]}");
-                Console.WriteLine($"Nama: {data.NamaBarang[i]}");
-                Console.WriteLine($"Harga: {data.HargaBarang[i]}");
-                Console.WriteLine($"Stok: {data.StokBarang[i]}");
-                Console.Write("Kembali? (y/n): ");
-                string jawab = Console.ReadLine().ToLower();
-                if (jawab == "yes" || jawab == "y")
+                if (!ditemukan_0401)
                 {
-                    Console.WriteLine("Pencarian dibatalkan.");
-                    return;
-                } else if (jawab  == "no" || jawab == "n")
-                {
-                    return;
-                } else
-                {
-                    Console.WriteLine("Input tidak valid. Pencarian dibatalkan.");
-                    return;
+                    Console.WriteLine("Hasil pencarian:");
+                    ditemukan_0401 = true;
                 }
+                Console.WriteLine($"\nBarang ditemukan!");
+                Console.WriteLine($"ID: {data.IdBarang_0401[i]}");
+                Console.WriteLine($"Nama: {data.NamaBarang_0401[i]}");
+                Console.WriteLine($"Harga: {data.HargaBarang_0401[i]}");
+                Console.WriteLine($"Stok: {data.StokBarang_0401[i]}");
+                Console.WriteLine($"Jenis Barang: {data.Kategori_0401[i]}");
             }
         }
 
-        if (!ditemukan)
+        if (!ditemukan_0401)
         {
             Console.WriteLine("Barang dengan nama tersebut tidak ditemukan.");
         }

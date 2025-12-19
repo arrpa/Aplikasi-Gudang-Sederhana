@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XwgfVW4hYhlFZ9XFzWcR5PtE/KK6jvhFMQ248x7RlAWxRI0fd6lH0yPMJ8x+y6xJEn6uAo+7y+CR3Apj4rYMsA==",
+  "dgSpecHash": "57nXg3U8IXdFKfF3qvr54WS/qYLR65ojHNcY3lYqVi6XLggVzakHU9HuE2yLZjGfvL6EZ70Jf21w+9q+mgOtPQ==",
   "success": true,
   "projectFilePath": "C:\\Ahmad\\Aplikasi_Gudang_Sederhana\\Aplikasi_Gudang_Sederhana.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\consoletables\\2.7.0\\consoletables.2.7.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\wcwidth\\1.0.0\\wcwidth.1.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

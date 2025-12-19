@@ -13,3 +13,7 @@ C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\refint\Aplikasi_Gudang_Seder
 C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.pdb
 C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.genruntimeconfig.cache
 C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\ref\Aplikasi_Gudang_Sederhana.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\ConsoleTables.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\bin\Debug\net8.0\Wcwidth.dll
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.csproj.AssemblyReference.cache
+C:\Ahmad\Aplikasi_Gudang_Sederhana\obj\Debug\net8.0\Aplikasi_Gudang_Sederhana.csproj.CopyComplete

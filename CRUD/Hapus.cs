@@ -4,25 +4,25 @@ public class Hapus
     {
         while (true)
         {
-            Console.WriteLine("===Hapus barang===");
+            Console.WriteLine("\n===Hapus barang===");
             Table.TampilkanData(data);
             if (data.GetLength() == 0)
             {
                 return;
             }
-            Console.Write("Kembali? (y/n): ");
-            string jawab = Console.ReadLine().ToLower();
+            Console.Write("\nKembali? (y/n): ");
+            string jawab_0401 = Console.ReadLine().ToLower();
 
-            if (jawab == "yes" || jawab == "y")
+            if (jawab_0401 == "yes" || jawab_0401 == "y")
             {
-                Console.WriteLine("Gajadi hapus.");
+                Console.WriteLine("\nGajadi hapus.");
                 return;
-            } else if (jawab == "no" || jawab == "n")
+            } else if (jawab_0401 == "no" || jawab_0401 == "n")
             {
                 Delete.ProsesHapus(data);
             } else
             {
-                Console.WriteLine("Tolong input yang benar!");
+                Console.WriteLine("\nTolong input yang benar!");
                 continue;
             }
         }

@@ -5,38 +5,38 @@ public class Tambah
         try
         {
             Console.Write("Masukkan ID Barang: ");
-            int id = int.Parse(Console.ReadLine());
+            int id_0401 = int.Parse(Console.ReadLine());
             Console.Write("Masukkan Nama Barang: ");
-            string nama = Console.ReadLine();
+            string nama_0401 = Console.ReadLine();
             Console.Write("Masukkan Harga Barang: ");
-            int harga = int.Parse(Console.ReadLine());
+            int harga_0401 = int.Parse(Console.ReadLine());
             Console.Write("Masukkan Stok Barang: ");
-            int stok = int.Parse(Console.ReadLine());
+            int stok_0401 = int.Parse(Console.ReadLine());
             Console.Write("Pilih kategori barang (edible/nonedible): ");
-            string pilihan = Console.ReadLine().ToLower();
-            Data.JenisBarang kategori;
+            string pilihan_0401 = Console.ReadLine().ToLower();
+            Data.JenisBarang_0401 kategori_0401;
 
-            switch (pilihan)
+            switch (pilihan_0401)
             {
                 case "edible":
-                    kategori = Data.JenisBarang.edible;
+                    kategori_0401 = Data.JenisBarang_0401.edible;
                     break;
                 case "nonedible":
-                    kategori = Data.JenisBarang.nonedible;
+                    kategori_0401 = Data.JenisBarang_0401.nonedible;
                     break;
                 default:
                     Console.WriteLine("Error: Kategori tidak valid. Silakan coba lagi.");
                     return;
             }
 
-            int sudahAda = data.CariIndexById(id);
-            if (sudahAda != -1)
+            int sudahAda_0401 = data.CariIndexById(id_0401);
+            if (sudahAda_0401 != -1)
             {
                 Console.WriteLine("Error: ID Barang sudah ada. Silakan gunakan ID yang lain.");
                 return;
             }
 
-            data.AddData(id, nama, harga, stok, kategori);
+            data.AddData(id_0401, nama_0401, harga_0401, stok_0401, kategori_0401);
 
             Console.WriteLine("Berhasil menambahkan barang!");
         } catch (Exception)

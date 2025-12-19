@@ -4,30 +4,23 @@ public class Update
     {
         while (true)
         {
-            Console.WriteLine("===Update barang===");
+            Console.WriteLine("\n===Update barang===");
             Table.TampilkanData(data);
 
-            if (data.GetLength() == 0)
+            Console.Write("\nKembali? (y/n): ");
+            string jawab_0401 = Console.ReadLine().ToLower();
+
+            if (jawab_0401 == "yes" || jawab_0401 == "y")
             {
-                Console.WriteLine("Data barang masih kosong.");
+                Console.WriteLine("\nGajadi update.");
                 return;
-            }
-
-
-            Console.Write("Kembali? (y/n): ");
-            string jawab = Console.ReadLine().ToLower();
-
-            if (jawab == "yes" || jawab == "y")
-            {
-                Console.WriteLine("Gajadi update.");
-                return;
-            } else if (jawab == "no" || jawab == "n")
+            } else if (jawab_0401 == "no" || jawab_0401 == "n")
             {
                 Edit.ProsesEdit(data);
             } 
             else
             {
-                Console.WriteLine("Input yang benar!");
+                Console.WriteLine("\nInput yang benar!");
                 continue;
             }
         }

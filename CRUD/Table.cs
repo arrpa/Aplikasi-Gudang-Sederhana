@@ -1,21 +1,27 @@
+using ConsoleTables;
+
 public class Table
 {
     public static void TampilkanData(Data data)
     {
-        
-        Console.WriteLine("Datanya");
-
+        Console.WriteLine("\nData barang di gudang:");
         if (data.GetLength() == 0)
         {
-            Console.WriteLine("masih belum ada data apapun.");
+            Console.WriteLine("Belum ada data barang yang ada.");
             return;
         }
-
-        Console.WriteLine("|ID\t|Nama\t|Harga\t|Stok\t|Jenis Barang");
+        var table = new ConsoleTable("ID", "Nama", "Harga", "Stok", "Jenis Barang");
         for (int i = 0; i < data.GetLength(); i++)
         {
-            Console.WriteLine($"{data.IdBarang[i]}\t|{data.NamaBarang[i]}\t|Rp.{data.HargaBarang[i]}\t|{data.StokBarang[i]}\t|{data.Kategori[i]}");
+            table.AddRow($"{data.IdBarang_0401[i]}", 
+            $"{data.NamaBarang_0401[i]}", 
+            $"Rp.{data.HargaBarang_0401[i]}", 
+            $"{data.StokBarang_0401[i]}", 
+            $"{data.Kategori_0401[i]}");
         }
+        table.Configure(o => o.EnableCount = false)
+        .Write(Format.Default);
+            Console.WriteLine($"\nTotal barang: {data.GetLength()}");
         
     }
 }

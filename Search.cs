@@ -4,22 +4,22 @@ public class Search
     {
         while (true)
         {
-            Console.WriteLine("=== Pencarian Barang ===");
+            Console.WriteLine("\n=== Pencarian Barang ===");
             Console.WriteLine("1. Cari berdasarkan ID");
             Console.WriteLine("2. Cari berdasarkan Nama");
             Console.WriteLine("3. Kembali ke menu utama");
             Console.Write("Pilih metode pencarian (1/2/3): ");
-            int pilihan = int.Parse(Console.ReadLine());
+            int pilihan_0401 = int.Parse(Console.ReadLine());
 
             try
             {
-                switch (pilihan)
+                switch (pilihan_0401)
                 {
                     case 1:
                         Searching.ProsesSearchById(data);
                         break;
                     case 2:
-                        Searching.ProsesSearchByNam(data);
+                        Searching.ProsesSearchByNama(data);
                         break;
                     case 3:
                         Console.WriteLine("Kembali ke menu utama.");

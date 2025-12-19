@@ -4,21 +4,21 @@ public class Create
     {
         while (true)
         {
-            Console.WriteLine("===Tambah barang baru===");
+            Console.WriteLine("\n===Tambah barang baru===");
             Table.TampilkanData(data);
-            Console.Write("Tambah data? (y/n): ");
-            string jawab = Console.ReadLine().ToLower();
+            Console.Write("\nTambah data? (y/n): ");
+            string jawab_0401 = Console.ReadLine().ToLower();
 
-            if (jawab == "no" || jawab == "n")
+            if (jawab_0401 == "no" || jawab_0401 == "n")
             {
-                Console.WriteLine("Penambahan barang dibatalkan.");
+                Console.WriteLine("\nPenambahan barang dibatalkan.");
                 return;
-            } else if (jawab  == "yes" || jawab == "y")
+            } else if (jawab_0401  == "yes" || jawab_0401 == "y")
             {
                 Tambah.ProsesTambah(data);
             } else
             {
-                Console.WriteLine("Input tidak valid. Penambahan barang dibatalkan.");
+                Console.WriteLine("\nInput tidak valid. Penambahan barang dibatalkan.");
                 continue;
             }
         }

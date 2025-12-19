@@ -4,13 +4,13 @@ public class Filtering
     {
         while (true)
         {
-            Console.WriteLine("=== Filtering Barang ===");
+            Console.WriteLine("\n=== Filtering Barang ===");
             Console.WriteLine("1. Edible");
             Console.WriteLine("2. Non-Edible");
             Console.WriteLine("3. Kembali ke menu utama");
             Console.Write("Pilih metode pencarian (1/2/3): ");
-            int pilihan = int.Parse(Console.ReadLine());
-            switch (pilihan)
+            int pilihan_0401 = int.Parse(Console.ReadLine());
+            switch (pilihan_0401)
             {
                 case 1:
                     Filter.ProsesFilterEdible(data);

@@ -26,7 +26,7 @@ public class Searching
     public static void ProsesSearchByNama(Data data)
     {
         Console.Write("Masukkan Nama Barang: ");
-        string nama_0401 = Console.ReadLine();
+        string nama_0401 = Console.ReadLine().ToLower();
 
         bool ditemukan_0401 = false;
         for (int i = 0; i < data.GetLength(); i++)

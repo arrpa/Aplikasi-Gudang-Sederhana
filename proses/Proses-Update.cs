@@ -1,3 +1,12 @@
+// Kelas: SI-25-04
+// Kelompok: 01
+// Anggota kelompok:
+// 1. Ahmad Rizkirich Putra Arif (102042500076)
+// 2. Bagas Riyadi (102042500156)
+// 3. Rizkia Putri Handayani Rabika (102042500118)
+// 4. Atta Rahman Raihannan (102042530017)
+// 5. Cindy Jovanna Silitonga (102042500072)
+
 public class Edit
 {
     public static void ProsesEdit(Data data)
@@ -30,13 +39,13 @@ public class Edit
                             
                     if (ganti_0401 == "yes" || ganti_0401 == "y")
                     {
-                        if (data.Kategori_0401[i] == Data.JenisBarang_0401.edible)
+                        if (data.Kategori_0401[i] == Data.JenisBarang_0401.EDIBLE)
                         {
-                            data.Kategori_0401[i] = Data.JenisBarang_0401.nonedible;
+                            data.Kategori_0401[i] = Data.JenisBarang_0401.NONEDIBLE;
                             return;
-                        } else if (data.Kategori_0401[i] == Data.JenisBarang_0401.nonedible)
+                        } else if (data.Kategori_0401[i] == Data.JenisBarang_0401.NONEDIBLE)
                         {
-                            data.Kategori_0401[i] = Data.JenisBarang_0401.edible;
+                            data.Kategori_0401[i] = Data.JenisBarang_0401.EDIBLE;
                             return;
                         } else
                         {

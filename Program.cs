@@ -1,4 +1,4 @@
-﻿// Kelas: Single-25-04
+﻿// Kelas: SI-25-04
 // Kelompok: 01
 // Anggota kelompok:
 // 1. Ahmad Rizkirich Putra Arif (102042500076)

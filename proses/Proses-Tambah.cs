@@ -1,3 +1,12 @@
+// Kelas: SI-25-04
+// Kelompok: 01
+// Anggota kelompok:
+// 1. Ahmad Rizkirich Putra Arif (102042500076)
+// 2. Bagas Riyadi (102042500156)
+// 3. Rizkia Putri Handayani Rabika (102042500118)
+// 4. Atta Rahman Raihannan (102042530017)
+// 5. Cindy Jovanna Silitonga (102042500072)
+
 public class Tambah
 {
     public static void ProsesTambah(Data data)
@@ -19,10 +28,10 @@ public class Tambah
             switch (pilihan_0401)
             {
                 case "edible":
-                    kategori_0401 = Data.JenisBarang_0401.edible;
+                    kategori_0401 = Data.JenisBarang_0401.EDIBLE;
                     break;
                 case "nonedible":
-                    kategori_0401 = Data.JenisBarang_0401.nonedible;
+                    kategori_0401 = Data.JenisBarang_0401.NONEDIBLE;
                     break;
                 default:
                     Console.WriteLine("Error: Kategori tidak valid. Silakan coba lagi.");
